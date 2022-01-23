@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100wh;
+    margin: 0 auto;
+    background-image: url(../todoList/ava7patterns_pattern_1786.png);
+    height: 100vw;
+}
+.container{
+    max-width: 90%;
+    padding: 5%;
+    margin: 0 auto;
+}
+.form{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+form{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#input, #button{
+    display: block;
+    outline: none;
+    border: none;
+}
+#input{
+    height: 50px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #FDFFE2;
+    padding: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    font-style: italic;
+    border-radius: 10px;
+}
+#button{
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-image: linear-gradient(#FDFF94, #733407);
+    padding: 5px;
+    font-family: 'Karla', Tahoma, Geneva, Verdana sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#button:hover{
+    transform: scale(1.1);
+    box-shadow: 15px 12px 5px 6px rgba(0,0,0,0.8);
+}
+#button:active{
+    box-shadow: none;
+}
+.list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.list_item{
+    min-width: 300px;
+    min-height: 100px;
+    background-color: #E4EE28;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.item_text{
+    padding: 20px;
+}
+.list_buttons{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+.list_buttons i{
+    margin-left: 10px;
+}
+.fa-check-square{
+    color: green;
+}
+.fa-times{
+    color: red;
+}
+.done{
+    background-color: #55D11D;
+}
+.failed{
+    background-color: #BA0101;
+}
