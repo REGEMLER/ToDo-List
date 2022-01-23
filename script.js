@@ -50,16 +50,15 @@ userInput.addEventListener('keydown', ({keyCode}) => {
 /////////////////////////////////////////////////////////
 list.addEventListener(`click`, function ({target}){
     if(target.classList.contains(`fa-times`)){
-        const clickedItem = innerList.find(i => i.id ===target.parentElement.id);
-        //clickedItem.failed = true;
+        const clickedItem = innerList.find((listItem) => listItem.id ===target.parentElement.parentElement.id);
+        clickedItem.failed = true;
         target.parentElement.parentElement.classList.add('failed');
         target.previousElementSibling .remove();
         target.remove();
     }
     if(target.classList.contains(`fa-check-square`)){
-        const clickedItem = innerList.find(listItem => listItem.id ===target.parentElement.id);
-        console.log(clickedItem);
-        //clickedItem.parentElement.parentElement.done = true;
+        const clickedItem = innerList.find((listItem) => listItem.id ===target.parentElement.parentElement.id);
+        clickedItem.done = true;
         target.parentElement.parentElement.classList.add('done');
         target.nextElementSibling.remove();
         target.remove();
@@ -67,5 +66,5 @@ list.addEventListener(`click`, function ({target}){
     if(target.classList.contains(`fa-trash-alt`)){
         target.closest('.list_item').remove();
     }
-    console.log(innerList);
+    console.dir(innerList);
 })
